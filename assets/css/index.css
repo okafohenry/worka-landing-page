@@ -1,0 +1,556 @@
+@font-face {
+    font-family: "Poppins";
+    src: local("Poppins"),url("../font/Poppins/Poppins-Regular.ttf") format("truetype");
+    font-weight: normal;
+}
+@font-face {
+    font-family: "PoppinsBold";
+    src: local("Poppins"),url("../font/Poppins/Poppins-Bold.ttf") format("truetype");
+    font-weight: normal;
+}
+
+body {
+    margin: 0;
+    font-family: Poppins;
+    /* min-width: 400px; */
+}
+
+:root {
+    --white: #ffff;
+    --light-green: #06CF99;
+    --dark-green: #073B4C;
+    --light-gray: #6C6C6C; 
+    --dark-gray: #222222;
+}
+
+
+/* PARAGRAPHS TAGS */
+.intro__section .section-text p,
+.how-it-works__section p, 
+.about-us__section .about-us_text p,
+.services__section .services-text p,
+.customer-reviews__section p {
+    font-weight: normal;
+    font-size: 17.5px;
+    font-weight: 400;
+    color: var(--light-gray);
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* NAVBAR */
+nav .navbar {
+    width: 100%;
+    top: 0;
+    z-index: 10;
+
+    background-image: linear-gradient(rgba(255,255,255,1) 65%, rgba(255, 255, 255, 0.9));
+    padding: 30px 0px;
+    display: flex;
+    justify-content: space-between;    
+}
+
+.intro__section .section-text h1 {
+    font-family: PoppinsBold;
+    font-weight: 700;
+}
+.intro__section .section-text .find-workers {
+    color: rgb(255, 199, 0);
+}
+.intro__section .section-text p {
+    line-height: 26px;
+}
+
+.intro__section .section-text a {
+    text-decoration: none;
+}
+.intro__section .section-text .links {
+    margin-top: 80px;
+}
+.intro__section .section-text .link1 {
+    background: var(--dark-green);
+    color: var(--white);
+    border-radius: 5px;
+    line-height: 33px;
+}
+.intro__section .section-text .link2 {
+    color: var(--dark-green);
+    line-height: 33px;
+}
+
+
+/* MOBILE VIEW */
+@media only screen and (max-width: 900px) {
+    .navbar .webview__link, .navbar .navbar-download__btn, .intro__section .carousel,
+    .download-app__section .content .phones-images .phone1, .about-us__section .about-us__images,
+    .download-app__section .content .phones-images .phone2 {
+        display: none;
+    }
+    .toggle-btn {
+        display: block;
+        margin-right: 50px;
+        background: transparent;
+        border: none;
+        color: var(--dark-green);
+        font-size: 22px;
+    }
+    .navbar .navbar-logo {
+        position: relative;
+        left: 10px;
+        height: 20px;
+    }
+    .navbar {
+    }
+
+    
+    .intro__section .row, .how-it-works__section .row{
+        display: grid;
+    }
+
+    
+    .intro__section .section-text h1 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .intro__section .links {
+        display: flex;
+        /* justify-content: space-around; */
+    }
+    .intro__section .links .link1 {
+        padding: 5px;
+        font-size: 17px;
+    }
+
+
+
+    .how-it-works__section .how-it-works {
+        min-width: 100%;
+    }
+    .about-us__section .about-us_text {
+        width: 100%;
+    }
+
+   
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* DESKTOP VIEW */
+@media only screen and (min-width: 950px) {
+
+    /* NAVBAR */
+    nav .navbar {
+        position: fixed;    
+    }
+    .navbar .webview__link {
+        margin: 0;
+        display: flex;
+        width: 40%;
+        justify-content: space-between;
+
+        list-style: none;
+    }
+    .navbar .webview__link a {
+        font-size: 17px;
+        text-decoration: none;
+        color: var(--light-gray);
+    }
+    .navbar ul a:hover {
+        color: var(--dark-gray);
+        /* border-bottom: 2px solid var(--dark-gray); */
+        font-weight: 600;
+    }
+    .navbar .navbar-logo {
+        position: relative;
+        left: 100px;
+    }
+    .navbar .navbar-download__btn {    
+        position: relative;
+        right: 70px;
+
+        padding: 5px 15px;
+        background: var(--dark-green);
+        border: 1px solid var(--dark-green);
+        border-radius: 5px;
+
+        text-decoration: none;    
+        color: var(--white);
+        font-size: 18px;
+        line-height: 27px;
+    }
+
+    .toggle-btn {
+        display: none;
+    }
+
+
+    /* SECTION 1 */
+    .intro__section {
+        padding-top: 200px;
+        padding-bottom: 120px;
+    } 
+    .intro__section .section-text h1 {
+        font-size: 48px;
+        line-height: 64px;
+    }
+    .intro__section .col {
+        background: transparent;
+    }
+   
+
+    .intro__section .section-text .link1 {
+        padding: 7px;
+        font-size: 20px;
+    }
+    .intro__section .section-text .link2 { 
+        font-size: 20px;   
+        padding: 7px 30px;
+    }
+    .intro__section .carousel {
+        position: relative;
+        top: -80px;
+        left: -40px;
+    }
+    .intro__section .carousel img {
+        width: 900px;
+        height: 550px;
+    }
+
+
+    /* SECTION 2 */
+    .rating__section {
+        background: var(--dark-green);
+        display: flex;
+    }
+    .rating__section .trusted-text, 
+    .rating__section .rating .text, 
+    .rating__section .service-text {
+        color: var(--white);
+    }
+
+    .rating__section .trusted-text {
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 40px
+    } 
+    .rating__section .rating ul {
+        list-style: none;
+    }
+    .rating__section .rating .text, .rating__section .service-text {
+        font-family: PoppinsBold;
+        font-size: 40px;
+        line-height: 46px;
+    }
+
+    /* SECTION 3 */
+    .how-it-works__section {
+        padding-top: 90px;
+        padding-bottom: 100px;    
+        display: flex;
+    }
+    .how-it-works__section h1 {
+        font-family: 'PoppinsBold';
+        font-size: 35px;
+        line-height: 60px;
+        color: var(--dark-gray);
+    }
+    .how-it-works__section h2 {
+        font-family: 'PoppinsBold';
+        margin-top: 30px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 39px;
+        color: var(--dark-gray);
+    }
+    .how-it-works__section p {
+        line-height: 25px;
+    }
+    .how-it-works__section .register-account div,
+    .how-it-works__section .check-services div,
+    .how-it-works__section .sit-and-enjoy div{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    /* ABOUT US */
+    .about-us__section {   
+        padding-top: 10px;
+    }
+
+    .about-us__section h1 { 
+        padding-bottom: 70px;
+        font-family: 'PoppinsBold';
+        font-size: 38px;
+        line-height: 60px;
+        text-align: center;
+        color: var(--dark-gray);
+    }
+    .about-us__section .about-us_text p {
+        line-height: 30px;
+        padding-bottom: 50px;
+    }
+    .about-us__section .about-us_text a {
+        padding: 12px 50px;
+        border-radius: 5px;
+
+        text-decoration: none;
+        background: var(--light-green);
+        color: var(--white);
+        font-weight: 600;
+        
+        transition: all 0.3s ease 0s;
+    }
+    .about-us__section .about-us_text a:hover {
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    } .about-us__images {
+        position: relative;
+        left: 100px;
+    }
+    .about-us__section
+    .about-us-cleaning {
+        position: relative;
+        top: -220px;
+        left: 190px;
+    }
+
+    /* SERVICES */
+    .services__section {
+        padding-bottom: 100px;
+    }
+    .services__section .services-text h1 {
+        font-family: 'PoppinsBold';
+        font-size: 37px;
+        line-height: 60px;
+        color: var(--dark-gray);
+    }
+
+    .services__section .service-info div {
+        width: 340px;
+        padding: 30px;
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .services__section .service-info h3 {
+        margin-top: 13px;
+        font-weight: 600;
+        font-size: 19px;
+        line-height: 39px;
+    }
+    .services__section .service-info .food {
+        background: var(--white);
+        position: relative;
+        top: -40px;
+        left: 300px;
+        z-index: 1;
+    }
+    .services__section .service-info .laundry {
+        margin-top: -100px;
+    }
+
+    /* DOWNLOAD APP */
+    .download-app__section {
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        background: var(--dark-green);
+    }
+    .download-app__section  h1 {
+        font-family: PoppinsBold;    
+        font-size: 40px;
+        line-height: 60px;
+        color: var(--white);
+    }
+    .download-app__section  p {
+        margin-top: 10px;
+        font-weight: lighter;
+        font-size: 18px;
+        line-height: 30px;
+        color: var(--white);
+    }
+    .download-app__section .content {
+        width: 60%;
+        margin: 0 auto;
+    }
+    .download-app__section .content .phones-images {
+        display: flex; 
+    }
+    .download-app__section .content .phones-images .phone2 {
+        margin-left: -150px;
+        margin-top: 80px;
+    }
+    .download-app__section .download_buttons {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        margin: 50px auto 0 auto;
+        width: 500px;
+    }
+    .download-app__section .download_buttons a {
+        display: flex;
+        padding: 0px 30px;
+        background: var(--white);
+        color: var(--dark-gray);
+        text-decoration: none;
+        border-radius: 5px;
+    }
+    .download-app__section .fa-apple,
+    .download-app__section .fa-google-play {
+        font-size: 25px;
+        margin-top: 13px;
+    }
+    .download-app__section a div {
+        padding: 0 15px;
+        text-align: left;
+    }
+    .download-app__section div .download-on-the,
+    .download-app__section div .get-it-on {
+        margin-bottom: 0;
+        font-size: 13px;
+    }
+    .download-app__section div .app-store,
+    .download-app__section div .google-play {
+        font-size: 18px;
+        font-weight: 600;
+        position: relative;
+        top: -5px;
+    }
+
+    /* CUSTOMER REVIEW */
+    .customer-reviews__section {
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+    .customer-reviews__section h1 {
+        font-family: PoppinsBold;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 47px;
+        /* identical to box height */    
+        text-align: center;
+        color: var(--dark-gray);
+    }
+    .customer-reviews__section p {
+        text-align: center;
+        max-width: 55%;
+        margin: 15px auto 0 auto;
+    }
+
+
+
+    /* FOOTER */
+    footer {
+        background: var(--dark-green);
+        padding: 50px 0 10px 0;
+        margin-bottom: 0;
+        color: var(--white);
+    }
+    footer h2 {
+        padding: 10px 0;
+        font-size: 25px;
+        letter-spacing: 0.02em;
+        color: var(--white);
+    }
+    footer a {
+        text-decoration: none;
+        color: #f9f9f9;
+    }
+    footer a:hover {
+        color: var(--white);
+    }
+    footer p {
+        font-size: 17px;
+        line-height: 36px;
+    /* identical to box height, or 200% */
+        letter-spacing: 0.02em;
+    }
+
+    footer .socials__footer {
+        max-width: 60%;
+        display: flex;
+        justify-content: space-between;
+    }
+    footer .socials__footer a {
+        font-size: 25px;
+    }
+    footer .copyright {
+        margin-top: 50px;
+        text-align: center;
+        font-size: 16px;
+        color: #A4A4A4;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* SCREEN RESPONSIVENESS  */
+
+    /* .intro__section, .how-it-works__section, 
+    .about-us__section, .services__section,
+    .customer-reviews__section {
+        display: block;
+    } */
+
+/* 
+@media only screen and (max-width: 900px) {
+   
+
+    .intro__section .row{
+        display: grid;
+        min-width: 600px;
+        margin: 0 auto;
+        justify-content: space-around;
+    }
+    .intro__section .section-text .link2 { 
+        margin-left: 100px;
+    }
+    .intro__section .carousel {
+        display: none;
+    }
+    .rating__section .col {
+        width: 700px;
+    }
+    .rating__section .row{
+        width: 800px;
+        display: grid;
+        margin: 0 auto;
+        z-index: 5;
+    }
+
+    
+  } */
